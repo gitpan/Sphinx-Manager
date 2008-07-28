@@ -1,0 +1,18 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Sphinx-Manager
+version:      0.01
+version_from: lib/Sphinx/Manager.pm
+installdirs:  site
+requires:
+    Carp:                          0
+    Class::Accessor::Fast:         0
+    File::Spec:                    0
+    FindBin:                       0
+    Path::Class:                   0
+    Proc::ProcessTable:            0
+    Sphinx::Config:                0
+    Test::More:                    0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30
