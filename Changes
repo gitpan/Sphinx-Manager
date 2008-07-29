@@ -3,3 +3,6 @@ Revision history for Sphinx-Manager
 0.01    2008-07-26
         First release
 
+0.02	2008-07-29
+	Handling of system() return status changed to avoid spurious ECHILD.
+

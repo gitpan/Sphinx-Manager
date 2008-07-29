@@ -9,6 +9,7 @@ use Proc::ProcessTable;
 use Path::Class;
 use File::Spec;
 use Sphinx::Config;
+use Errno qw/ECHILD/;
 
 __PACKAGE__->mk_accessors(qw/config_file 
 			  pid_file 
@@ -137,9 +138,12 @@ sub _wait_for_proc {
 sub _system_with_status
 {
     my ($command) = @_;
+
+    local $SIG{CHLD} = 'IGNORE';
     my $status = system($command);
     unless ($status == 0) {
         if ($? == -1) {
+	    return '' if $! == ECHILD;
             return "$command failed to execute: $!";
         }
         if ($? & 127) {
@@ -266,11 +270,11 @@ Sphinx::Manager - Sphinx search engine management (start/stop)
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
