@@ -1,8 +1,0 @@
-#! /usr/bin/perl
-
-# indexer simulation
-
-use strict;
-use warnings;
-
-exit 0;
