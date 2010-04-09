@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Sphinx-Manager
-version:             0.04
+version:             0.05
 abstract:            Sphinx search engine management (start/stop)
 license:             ~
 author:              

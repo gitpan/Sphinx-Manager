@@ -11,7 +11,7 @@ use File::Spec;
 use Sphinx::Config;
 use Errno qw/ECHILD/;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 __PACKAGE__->mk_accessors(qw/config_file 
 			  pid_file 
@@ -275,7 +275,7 @@ sub reload_searchd {
 	$self->_kill(1, @$pids);
     }
     else {
-	$self->start_searchd;
+	$self->start_searchd(1);
     }
 }
 

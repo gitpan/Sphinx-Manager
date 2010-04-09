@@ -11,3 +11,7 @@ Revision history for Sphinx-Manager
 
 0.04	2010-04-09
 	Added $ok_if_running flag to start_searchd.
+
+0.05	2010-04-09
+	Relaxed reload so that error won't be raised if something else starts
+	searchd concurrently
