@@ -15,3 +15,6 @@ Revision history for Sphinx-Manager
 0.05	2010-04-09
 	Relaxed reload so that error won't be raised if something else starts
 	searchd concurrently
+
+0.06    2011-03-23
+        Required Sphinx::Config 0.09 due to failing test case.

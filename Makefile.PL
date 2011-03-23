@@ -15,7 +15,7 @@ WriteMakefile(
 	'Path::Class' => 0,
 	'Proc::ProcessTable' => 0,
 	'File::Spec' => 0,
-	'Sphinx::Config' => 0,
+	'Sphinx::Config' => '0.09',
 	'Class::Accessor::Fast' => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
